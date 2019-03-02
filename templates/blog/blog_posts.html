@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+{% load bootstrap_tags %}
+
+<div class="basic-box">
+    <div class="row">
+        <div id="internal-frame-left-intro" class="col-sm-3">
+            <h2 class="firstColour"> Blog</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+            <a href="{% url 'new_post'  %}"  class="btn btn-default btn-md standard-style-button"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>&nbsp; New post</a>
+        </div>
+        <div class="col-sm-7">
+            <div class="row>">
+                {% for post in posts %}
+                    <div class="col-sm-12">
+                        <h3 class="firstColour">{{ post.title }}</h3>
+                        <br>
+                        By <a href="{% url 'member_detail' post.author.id %}"><b>{{ post.author.first_name }} {{ post.author.last_name }}</b></a>
+                    </div>
+                    <div class="col-sm-12">
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p>
+                                    {% autoescape off %}
+                                        {{ post.content |truncatewords:30 }}
+                                    {% endautoescape %}
+                                </p>
+                                <br>
+                                <p><a href="{% url 'post_details' post.id %}"  class="btn btn-default btn-md standard-style-button"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>&nbsp;Read more</a></p>
+                                <br>
+                                <p>{{ post.published_date }}     &nbsp;|&nbsp;    <strong>VIEWS</strong>&nbsp; {{ post.views }} &nbsp; |&nbsp;    <strong>TAGS</strong>&nbsp; {{ post.tag }}</p>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</div>   
+{% endblock %}
+

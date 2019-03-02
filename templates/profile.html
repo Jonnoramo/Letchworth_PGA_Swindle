@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% block content %}
+
+    <div class="row intro">
+    <div class="container">
+<h1>Your Profile</h1>
+        </div>
+</div>
+
+<div class="container text-justify">
+    <div class="row">
+        <div class="col-md-12">
+    <h2> Welcome {{ user.first_name }}!</h2>
+    <p> You are logged in as <strong>{{ user.email }}</strong> </p>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+    <p> Your last login was on {{ user.last_login }}</p>
+            </div>
+    </div>
+
+
+</div>
+{% endblock %}

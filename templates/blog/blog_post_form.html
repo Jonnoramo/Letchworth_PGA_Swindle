@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% load staticfiles %}
+{% block head_js %}
+    <script src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
+    <script>
+        tinyMCE.init({
+            mode: "textareas",
+            theme: "modern",
+            plugins: "paste"
+        });
+    </script>
+{% endblock %}
+{% block content %}
+    <div class="row basic-box dotted-background">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">      
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | as_bootstrap}}
+                <br>
+                <div class=" row">
+                    <div class="col-sm-6 form-group">
+                        <button type="submit" class=" btn btn-md btn-default standard-style-button"><span class="glyphicon glyphicon-send" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Post</button>
+                    </div>
+                    <div id="if-not-sure-sending" class="col-sm-6">
+                        If not sure: &nbsp;&nbsp; <a href="{% url 'post_list' %}"  class="btn btn-default btn-md standard-style-button"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>&nbsp; Blog</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>   
+{% endblock %}

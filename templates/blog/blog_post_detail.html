@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+{% load bootstrap_tags %}
+{% load staticfiles %}
+{% load emoticons_tags %}
+<div class="basic-box blog-background">
+   <div class="row">
+        <div class="col-md-3">
+        <div id ="internal-frame-left-intro">
+            <h2 class="thirdColour">{{ post.title }}</h2>
+        </div>
+            <hr>
+            <a class=" post-author-fullname" href="{% url 'member_detail' post.author.id %}">
+                <div class="row">
+                    <div class="col-lg-3">
+                         {% if post.author.user_profile_picture %}
+                            <img src="/{{ post.author.user_profile_picture}}" height="50px" width="50px">
+                         {% else %}
+                            <img src="http://placehold.it/100" style="width:50px; height: 50px;" class="img-circle">
+                         {% endif %}
+                    </div>
+                    <div id="full-name-blog-article" class="col-lg-9">
+                        <p><b>{{ post.author.first_name }} {{ post.author.last_name }}</b></p>
+                    </div>
+                </div>
+            </a>
+            <br>
+        </div>
+
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    {% if post.image %}
+                        <img src="/{{ post.image }}" height="100%" width="100%">
+                    {% endif %}
+                    <hr>
+                    <p>
+                        {% autoescape off %}
+                            {{ post.content|emoticons }}
+                        {% endautoescape %}
+                    </p>
+                    <br>
+                    <p>{{ post.published_date }}     &nbsp;|&nbsp;    <strong>VIEWS</strong>&nbsp; {{ post.views }} &nbsp; |&nbsp;    <strong>TAGS</strong>&nbsp; {{ post.tag }}</p>
+                    <br>
+                    <button class="btn btn-md btn-default standard-style-button" onclick="location.href='/blog'"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>&nbsp; Back to blog</button>
+                    <br>
+                    <hr>
+                    <br>
+                    {% load disqus_tags %}
+                    {% set_disqus_title post.title %}
+                    {% disqus_show_comments %}
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

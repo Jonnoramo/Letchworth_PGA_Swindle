@@ -16,11 +16,16 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from accounts import views as accounts_views
+from home import views
+from signup import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^register/$', accounts_views.register, name='register'),
     url(r'^profile/$', accounts_views.profile, name='profile'),
     url(r'^login/$', accounts_views.login, name='login'),
+    url(r'^logout/$', accounts_views.logout, name='logout'),
+    url(r'^signup/$', views.get_signup, name='signup'),
     url('', include('home.urls')),
+    url('', include('blog.urls')),
 ]
