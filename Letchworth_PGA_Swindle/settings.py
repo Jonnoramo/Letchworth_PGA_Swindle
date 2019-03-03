@@ -41,10 +41,14 @@ INSTALLED_APPS = [
     'django.contrib.flatpages',
     'django_forms_bootstrap',
     'tinymce',
+    'emoticons',
+    'disqus',
     'accounts',
     'blog',
     'home',
     'signup',
+    'handicap',
+    'leaguetable',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,117 @@
+body{
+    font-family: 'Lato', SansSerif;
+}
+
+p{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+}
+
+.mySlides{
+    display: none;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 940px;
+  position: relative;
+  margin: auto;
+}
+/* Caption text */
+.text{
+    text-align: center;
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0;
+    min-width:100%;
+    background-color: black;
+    display: block;
+}
+
+.text a{
+    background-color: #37aa22;
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+#login i{
+    font-size: 30px;
+    color:#85bfea;
+    padding: 10px;
+}
+
+#googleMap{
+    min-height: 320px;
+    padding: 30px;
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.btn-info{
+    color: #85bfea;
+}
+
+.navbar-inverse{
+    font-weight: bolder;
+}
+
+
+table, th, td {
+  border: 1px solid black;
+}
+
+/* Signup.html */
+.saturday-next {
+    width:160px;
+    padding:5px 0;
+    border:3px double #999;
+    margin:auto;
+    text-align:center;
+ }

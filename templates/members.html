@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="basic-box">
+        <div class="row">
+            <div id="internal-frame-left-intro" class="col-sm-3">
+                <h2 class="firstColour">Members</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            </div>
+            <div class="col-sm-4">
+                <hr>
+                    <h3>Have a look at <b>the rest of the crew</b>.
+                    <br>Here you can find people with the
+                    <br><b>same interests</b> as yours.
+                    <br>
+                    <br>
+             </div>
+            <div class="col-sm-5">
+                {% for user in user_list %}
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-2"><!-- Profile picture -->
+                            <div class="members-elements">
+                                {% if user.user_profile_picture == None %}
+                                      <img src="http://placehold.it/100" style="width:50px; height: 50px; ;" class="img-circle">
+                                {% else %}
+                                    <img src="/{{ user.user_profile_picture }}" height="50px" width="50px">
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-lg-7"><!-- Name -->
+                            <p class="firstColour"><b>{{ user.first_name }} {{ user.last_name }}</b></p>
+                        </div>
+                        <div class="col-lg-3">
+                            <a href="{% url 'member_detail' user.id %}" class="btn btn-default btn-md standard-style-button"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>&nbsp;More info</a>
+                        </div>
+                   </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

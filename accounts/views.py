@@ -69,3 +69,15 @@ def logout(request):
     auth.logout(request)
     messages.success(request, 'You have successfully logged out. See you soon!')
     return render(request, 'index.html')
+
+@login_required
+def get_users(request):
+    return render(request, "members.html", {'user_list': User.objects.all()})
+
+@login_required
+def get_user_details(request, user_id):
+    try:
+        user = User.objects.filter(pk=user_id)
+    except User.DoesNotExist:
+        raise Http404("Noooo")
+    return render(request, "member_detail.html", {'details': user })    

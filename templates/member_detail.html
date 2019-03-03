@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="basic-box">
+        {% for user in details %}
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="member-details-image">
+                        {% if not user.user_profile_picture %}
+                            <img src="http://placehold.it/100" height="300px" width="300px" class="img-circle">
+                        {% else %}
+                            <img src="/{{ user.user_profile_picture }}" height="300px" width="300px">
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-lg-5 member-details-info">
+                    <hr>
+                    <h4 class="firstColour"><b>{{ user.first_name }} {{ user.surname }}</b></h4>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">Email</div>
+                        <div class="col-sm-9 firstColour"><b>{{ user.username }}</b></div>
+                        <div class="col-sm-3">City</div>
+                        <div class="col-sm-9 firstColour"><b>{{ user.city }}</b></div>
+                        <div class="col-sm-3">Occupation</div>
+                        <div class="col-sm-9 firstColour"><b>{{ user.occupation }}</b></div>
+                        <div class="col-sm-3">Joined</div>
+                        <div class="col-sm-9 firstColour"><b>{{ user.date_joined }}</b></div>
+                    </div>
+                    <hr>
+                    <a href="{% url 'members'%}"  class="btn btn-default btn-md standard-style-button"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>&nbsp;Members</a>
+                </div>
+            <div class="col-lg-4 member-details-info"></div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

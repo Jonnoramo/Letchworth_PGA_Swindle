@@ -2,45 +2,127 @@
 {% block content %}
 
 <!DOCTYPE html>
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
     <link rel="stylesheet" href="static/custom.css" />
+</head>
+<body>    
 
 <div id="wrapper" class="container">
     <section class="intro-steps-1 parallax-standard-block">
     <div class="container">
       <div class="row">
         <div  class="col-xs-12 col-sm-6 col-md-6 col-lg-3 home-text-image">
-          <p>Welcome to The Letchworth PGA Swindle<b>.</p>          
+          <center>
+          <h1>About Us<b></h1>
+          </center>          
         </div>
         <div class="col-xs-0 col-sm-6 col-md-6 col-lg-9">
         </div>
       </div>
     </div>
   </section>
-  <section class="intro-steps-4 parallax-standard-block">
-    <div class="container">
-      <div class="row">       
-        <div  class="col-xs-12 col-sm-6 col-md-6 col-lg-3 home-text-image">
-          <p>Sign up to the calendar, if your interested in playing this Saturday, please put a tick next to your name.</b>.</p>          
-        </div>
-        <div class="col-xs-0 col-sm-6 col-md-6 col-lg-9">
-        </div>
-      </div>
-    </div>
-  </section>
+  
                 </div>
             </div>           
         </div>
     </div>
 </div>
-<centre><img src="https://www.letchworthgolfclub.com/images/resources/letchworth/tslogo.png"
-                    alt="golf.jpg"
-                    height="300" width="400"></centre>
-                    
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8m_AwBNn_dg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--slider container-->
+        <div class="slideshow-container" id="mySlides">
+                    <div class="mySlides fade">
+
+                    <img src="https://www.thecomet.net/polopoly_fs/1.2298051.1374745098!/image/2107329294.jpg_gen/derivatives/landscape_630/2107329294.jpg" alt="frontdoor" style="width:50%">
+
+                  </div>
+                  <div class="mySlides fade">
+
+                    <img src="https://www.letchworthgolfclub.com/images/thumbs/slideshow/letchworth/870x454/0-0-0-0/1/33_61.jpg" alt="golf" style="width:50%">
+                  </div>
+
+                  <div class="mySlides fade">
+
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/12/69/56/df/9th-hole.jpg" alt="9th-hole" style="width:50%">
+
+                  </div>
+
+ 
+
+            </div>
+
+            <style>.mySlides{
+    display: none;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 940px;
+  position: relative;
+  margin: auto;
+}
+/* Caption text */
+.text{
+    text-align: center;
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0;
+    min-width:100%;
+    background-color: black;
+    display: block;
+}
+
+.text a{
+    background-color: #37aa22;
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+</style>
+
+            <script type="text/javascript">  
+              var slideIndex = 0;
+              showSlides();
+
+              function showSlides() {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";
+                  }
+                  slideIndex++;
+                  if (slideIndex> slides.length) {slideIndex = 1}
+                  slides[slideIndex-1].style.display = "block";
+                  setTimeout(showSlides, 4000); // Change image every 5 seconds
+              } </script>
+
+<p>The PGA Swindle was created by a group of Letchworth golf club members in 2015.  The group meets every Saturday morning at 8:30.
+We run a competition every week based on individual Stableford scores and we also run 2 seasonal competitions, a winter league and a summer league.  The leagues take the scores from each week and add them to a league table.
+The group includes member of handicap levels from 5 to 25 and runs its own parallel handicap system based on performance in the league to ensure fair distribution of prize money.
+</p>
+
+
 
 <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

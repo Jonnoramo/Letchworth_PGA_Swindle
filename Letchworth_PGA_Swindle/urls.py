@@ -16,7 +16,10 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from accounts import views as accounts_views
+from blog import views as blog_views
 from home import views
+from handicap import views as handicap_views
+from leaguetable import views as leaguetable_views
 from signup import views
 
 urlpatterns = [
@@ -25,7 +28,16 @@ urlpatterns = [
     url(r'^profile/$', accounts_views.profile, name='profile'),
     url(r'^login/$', accounts_views.login, name='login'),
     url(r'^logout/$', accounts_views.logout, name='logout'),
+    url(r'^members/$', accounts_views.get_users, name='members'),
+    url(r'^member_detail/(?P<user_id>\d+)/$', accounts_views.get_user_details, name='member_detail'),
+    url(r'^blog$', blog_views.post_list, name="post_list"),
+    url(r'^blog/$', blog_views.post_list, name="post_list"),
+    url(r'^blog/(?P<id>\d+)/$', blog_views.post_details, name="post_details"),
+    url(r'^blog/post/$', blog_views.new_post, name='new_post'),
+    url(r'^handicap/$', handicap_views.get_handicap, name='handicap'),
+    url(r'^league/$', leaguetable_views.get_league, name='league'),
     url(r'^signup/$', views.get_signup, name='signup'),
+
     url('', include('home.urls')),
-    url('', include('blog.urls')),
+    url('', include ('handicap.urls')),
 ]
