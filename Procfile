@@ -1,0 +1,1 @@
+web: gunicorn Letchworth_PGA_Swindle.wsgi:application
