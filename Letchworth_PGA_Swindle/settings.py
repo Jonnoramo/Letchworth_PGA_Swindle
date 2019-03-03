@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django_forms_bootstrap',
     'tinymce',
     'emoticons',
-    'disqus',
     'accounts',
     'blog',
     'home',
