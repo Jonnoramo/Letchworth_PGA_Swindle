@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.flatpages',
     'django_forms_bootstrap',
     'tinymce',
+    'disqus',
     'emoticons',
     'accounts',
     'blog',
