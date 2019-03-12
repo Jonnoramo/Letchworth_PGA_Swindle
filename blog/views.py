@@ -38,4 +38,10 @@ def new_post(request):
         form = BlogPostForm()
     return render(request, 'blog/blog_post_form.html', {'form': form})
 
+def _get_failure_view():
+    """
+    Returns the view to be used for CSRF rejections
+    """
+    return get_callable(settings.CSRF_FAILURE_VIEW)     
+
 

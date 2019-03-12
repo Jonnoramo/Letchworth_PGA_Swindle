@@ -171,103 +171,119 @@ table, th, td {
   </tr>
   <tr>
     <td>Joe Ciampa</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox1" value="save" onclick="save()" ></td>
   </tr>
   <tr>
     <td>Ringo Theara</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()" ></td>
   </tr>
   <tr>
     <td>Gamma Basra</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>David Park</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Julian Pennie</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Kamal Dhunna</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Peter Ramsden</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Ian Hamilton</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>David Andrews</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()" ></td>
   </tr>
   <tr>
     <td>Richard Moore</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Kobus Sheepers</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Andy Carter</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Ed Barham</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Richard Pawlowski</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Hayden Perkes</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Mark Hickman</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Jamie Dixon</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Darren Castle</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Craig Palmer</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Paul Bentley</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Mick Rose</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Josh Eaton</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Martin Gallagher</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>James Gray</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>David Quinlan</td>
-    <td><input type="checkbox" ></td>
+    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
   </tr></center>
+
 </div>
+<script type="text/javascript">
+function save(){
+   var checked = JSON.parse(localStorage.getItem('checkbox1'));
+   if (checked == true) {
+    document.getElementById("checkbox1").checked = true;
+}
+
+function load(){    
+    var checked = JSON.parse(localStorage.getItem('checkbox1'));
+    document.getElementById("checkbox").checked = checked;
+}
+
+
+}
+</script>
 {% endblock %}
