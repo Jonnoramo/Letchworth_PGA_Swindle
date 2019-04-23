@@ -17,10 +17,16 @@
 </head>
 <body>
 
-  
-<div class="container">
-   <div class="masthead">
-       <ul class="nav nav-pills pull-right">
+ <nav class="nav navbar-inverse">
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCollapsingList">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myCollapsingList">
+        <ul class="nav navbar-nav navbar-right container-fluid">  
           <li><a href="/">Home</a></li>
 
           {% if user.is_authenticated%}
@@ -29,6 +35,7 @@
              <li><a href="/signup/">Signup List</a></li>
              <li><a href="/handicap/">Handicap List</a> </li>
              <li><a href="/league/">League Table</a> </li>
+             <li><a href="/rules/">Competition Rules</a></li>
              <li><a href="/logout/">Log Out</a></li>
           {% else %}
              <li><a href="{% url 'register' %}">Register</a></li>
@@ -37,6 +44,7 @@
        </ul>
        <h1><span class="fui-settings-16 muted">Letchworth PGA Swindle</span></h1>
    </div>
+ </nav>
    <hr>
     {% if messages %}
         <div class="alert alert-success">
@@ -56,6 +64,23 @@
    <hr>
 
 </div>
+<style type="text/css">
+  .navbar-inverse {
+    background-color: green;
+  }
+
+  #myCollapsingList {
+    background-color: green;
+  }
+
+  a[title]:hover:after {
+  content: attr(title);
+  position: absolute;
+  color: white;
+}
+
+</style>
+
 </body>
  
 <!-- script references -->

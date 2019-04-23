@@ -24,16 +24,20 @@ class AccountUserManager(UserManager):
 
         return user
 
+        
+
 class User(AbstractUser):
 	
 
     # Custom attribute added to user class
 	
 	
-    firstname = models.CharField(max_length=40, default='')
-    surname = models.CharField(max_length=40, default='')
+    first_name = models.CharField(max_length=40, default='')
+    last_name = models.CharField(max_length=40, default='')
+    user_profile_picture = models.ImageField('user_profile_picture', upload_to='static/images/profiles/', null=True, blank=True)
     city = models.CharField(max_length=40, default='')
-    occupation = models.CharField(max_length=40, default='')
+    handicap = models.CharField(max_length=2, default='')
     objects = AccountUserManager()
+    playing = models.CharField(max_length=3, default='')
     membership_id = models.CharField(max_length=40, default='')
     date_joined = models.DateTimeField(default=timezone.now)

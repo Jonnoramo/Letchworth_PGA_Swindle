@@ -25,8 +25,9 @@ SECRET_KEY = '!3%w^9h@wz^-fg&%sjzq_9-15q^#k6ty-fk(bm5l)irk-!m)&='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','letchworth-pga-swindle.herokuapp.com']
+ALLOWED_HOSTS = ['localhost','127.0.0.1','letchworth-pga-swindle.herokuapp.com']
 
+SITE_ID = 1
 
 # Application definition
 
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
     'signup',
     'handicap',
     'leaguetable',
+    'rules',
 ]
 
 MIDDLEWARE = [

@@ -1,26 +1,59 @@
+
 {% extends "base.html" %}
 {% load bootstrap_tags %}
 {% block content %}
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="static/custom.css" />
+    <script src="/static/js/jquery-3.1.0.js"></script>
+    <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <div class="row intro">
     <div class="container">
-<h1>Your Profile</h1>
+<center>
+<img src="https://sites.google.com/site/wanlakran/_/rsrc/1477892471986/home/summer_010.png" alt="profile" height="200" width="400">
         </div>
 </div>
 
-<div class="container text-justify">
+
+<div class="basic-box profile-background">
     <div class="row">
-        <div class="col-md-12">
-    <h2> Welcome {{ user.first_name }}!</h2>
-    <p> You are logged in as <strong>{{ user.email }}</strong> </p>
+        <div class="col-sm-3 "></div>
+        <div class="col-sm-1 "></div>   
+        <div id="profile-info" class="col-sm-4">
+            <!-- Part 1: Profile image and full name -->
+            <div class="row">
+                <<div class="col-md-4">             
+                    {% if not user.user_profile_picture %}
+                      <img src="http://placehold.it/100" style="width:50px; height: 50px; ;" class="img-circle">
+                    {% else %}
+                    
+                        <img src="/{{ user.user_profile_picture }}" height="170px" width="170px"></center>
+                    {% endif %}
+                </div>
+                <div class="col-lg-9 full-name-profile">
+                    <p><b>{{ user.first_name }} {{ user.last_name }}</b></p>
+                </div>
             </div>
-    </div>
+            <hr>
+ 
+
+            <!-- Part 2: Account info and link to details -->
+            <h3 class="firstColour"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;&nbsp;Account info</h3>
+            <p>You are logged in as <b>{{ user.email }}</b> </p>
+            <p>Your membership id is <b>{{ user.membership_id }}</b> </p>
+            <p>Your handicap is <b>{{ user.handicap }}</b> </p>
+             <br>
+            <a href="{% url 'member_detail' user.id %}" class="btn btn-default btn-md standard-style-button"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>&nbsp;&nbsp;My details</a>                           
+            <hr>
     <div class="row">
         <div class="col-md-6">
-    <p> Your last login was on {{ user.last_login }}</p>
+    <p> Your last login was on {{ user.last_login }}</p></center>
+
+  
+
+
             </div>
+
     </div>
 
-
-</div>
-{% endblock %}
+    </center>
+{% endblock %}        

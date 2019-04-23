@@ -1,11 +1,26 @@
 body{
     font-family: 'Lato', SansSerif;
+    font-size: 18px;
+    color: white;
 }
+
+h1{
+  font-family: 'SansSerif';
+  font-size: 36px;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+
+title{
+    font-size: 36px;
+    color: white;
+    font-family: sans-serif;
+  } 
 
 p{
     font-family: sans-serif;
     font-size: 20px;
-    font-weight: bolder;
     color: black;
 }
 
@@ -100,12 +115,14 @@ p{
 
 .navbar-inverse{
     font-weight: bolder;
+    color: green;
 }
 
 
 table, th, td {
   border: 1px solid black;
 }
+
 
 /* Signup.html */
 .saturday-next {
