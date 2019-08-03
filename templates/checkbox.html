@@ -1,0 +1,27 @@
+<table cellpadding="0" cellspacing="5" width="100%" height="60%">
+            <tr>
+                <td width="20%" height="20%"><input class="box" type="checkbox" name="1" /></td>
+                <td width="20%" height="20%"><input class="box" type="checkbox" name="2" /></td>
+                <td width="20%" height="20%"><input class="box" type="checkbox" name="3" /></td>
+            </tr>
+            <tr>
+                <td width="20%" height="20%"><input class="box" type="checkbox" name="4" /></td>
+                <td width="20%" height="20%"><input class="box" type="checkbox" name="5" /></td>
+                <td width="20%" height="20%"><input class="box" type="checkbox" name="6" /></td>
+            </tr>
+        </table>
+
+<script type="text/javascript">
+$("input.box").each(function() {
+    var mycookie = $.cookie($(this).attr('name'));
+    if (mycookie && mycookie == "true") {
+        $(this).prop('checked', mycookie);
+    }
+});
+$("input.box").change(function() {
+    $.cookie($(this).attr("name"), $(this).prop('checked'), {
+        path: '/',
+        expires: 365
+    });
+});
+</script>

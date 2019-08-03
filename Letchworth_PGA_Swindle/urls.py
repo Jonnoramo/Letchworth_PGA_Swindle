@@ -19,6 +19,7 @@ from accounts import views as accounts_views
 from blog import views as blog_views
 from home import views
 from handicap import views as handicap_views
+from results import views as results_views
 from leaguetable import views as leaguetable_views
 from signup import views
 from rules import views as rules_views
@@ -36,6 +37,7 @@ urlpatterns = [
     url(r'^blog/(?P<id>\d+)/$', blog_views.post_details, name="post_details"),
     url(r'^blog/post/$', blog_views.new_post, name='new_post'),
     url(r'^rules/$', rules_views.get_rules, name='rules'),
+    url(r'^results/$', results_views.get_results, name='results'),
     url(r'^handicap/$', handicap_views.get_handicap, name='handicap'),
     url(r'^league/$', leaguetable_views.get_league, name='league'),
     url(r'^signup/$', views.get_signup, name='signup'),

@@ -3,6 +3,7 @@
 {% block content %}
 <html>
 <head>
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 </head>
 <body>
 <center>
@@ -99,6 +100,7 @@ document.write(cal);
     border:3px double #999;
     margin:auto;
     text-align:center;
+    background-color:yellow;
  }
 </style>
 
@@ -122,8 +124,11 @@ function init(){
   <style>
 table, th, td {
   border: 1px solid black;
+  background-color: grey;
+  color: white;
 }
 </style>
+<div class="TABLE" id="checkbox-container"><table style="width:100%">
     <table bgcolor="yellow">
   <caption>Sign-up List</caption>
   <tr>
@@ -136,112 +141,149 @@ table, th, td {
   </tr>
   <tr>
     <td>Ringo Theara</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()" ></td>
+    <td><input type="checkbox" id="checkbox2" value="save" onclick="save()" ></td>
   </tr>
   <tr>
     <td>Gamma Basra</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox3" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>David Park</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox4" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Julian Pennie</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox5" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Kamal Dhunna</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox6" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Peter Ramsden</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox7" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Ian Hamilton</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox8" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>David Andrews</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()" ></td>
+    <td><input type="checkbox" id="checkbox9" value="save" onclick="save()" ></td>
   </tr>
   <tr>
     <td>Richard Moore</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox10" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Kobus Sheepers</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox11" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Andy Carter</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox12" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Ed Barham</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox13" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Richard Pawlowski</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox14" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Hayden Perkes</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox15" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Mark Hickman</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox16" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Jamie Dixon</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox17" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Darren Castle</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox18" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Craig Palmer</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox19" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Paul Bentley</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox20" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Mick Rose</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox21" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Josh Eaton</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox22" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>Martin Gallagher</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox23" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>James Gray</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
+    <td><input type="checkbox" id="checkbox24" value="save" onclick="save()"></td>
   </tr>
   <tr>
     <td>David Quinlan</td>
-    <td><input type="checkbox" id="checkbox" value="save" onclick="save()"></td>
-  </tr></center>
-
+    <td><input type="checkbox" id="checkbox25" value="save" onclick="save()"></td>
+  </tr>
 </div>
+</table>
+
 <script type="text/javascript">
-function save(){
-   var checked = JSON.parse(localStorage.getItem('checkbox1'));
-   if (checked == true) {
-    document.getElementById("checkbox1").checked = true;
+var formValues = JSON.parse(localStorage.getItem('formValues')) || {};
+var $checkboxes = $("#checkbox-container :checkbox");
+var $button = $("#checkbox-container button");
+
+function allChecked(){
+return $checkboxes.length === $checkboxes.filter(":checked").length;
 }
-function load(){    
-    var checked = JSON.parse(localStorage.getItem('checkbox1'));
-    document.getElementById("checkbox").checked = checked;
+
+function updateButtonStatus(){
+$button.text(allChecked()? "Uncheck all" : "Check all");
 }
+
+function handleButtonClick(){
+$checkboxes.prop("checked", allChecked()? false : true)
 }
+
+function updateStorage(){
+$checkboxes.each(function(){
+formValues[this.id] = this.checked;
+});
+
+formValues["buttonText"] = $button.text();
+localStorage.setItem("formValues", JSON.stringify(formValues));
+}
+
+$button.on("click", function() {
+handleButtonClick();
+updateButtonStatus();
+updateStorage();
+});
+
+$checkboxes.on("change", function(){
+updateButtonStatus();
+updateStorage();
+});
+
+// On page load
+$.each(formValues, function(key, value) {
+$("#" + key).prop('checked', value);
+});
+
+$button.text(formValues["buttonText"]);
+
+
 </script>
+</script></center>
+</div>
 {% endblock %}
